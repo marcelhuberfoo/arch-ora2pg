@@ -7,8 +7,7 @@ pkgdesc="Oracle to PostgreSQL database schema converter"
 arch=('any')
 url="http://ora2pg.darold.net/"
 license=('GPL')
-depends=('perl>=5.10.0')
-makedepends=()
+depends=('perl>=5.10.0' 'perl-dbi' 'perl-dbd-oracle')
 options=(!emptydirs)
 install=
 source=("$pkgname"::'git+git://github.com/darold/ora2pg.git')
@@ -29,7 +28,7 @@ build() {
   cd "$srcdir/$pkgname"
 
   # Install module in vendor directories.
-  PERL_MM_USE_DEFAULT=1 perl Makefile.PL INSTALLDIRS=vendor
+  PERL_MM_USE_DEFAULT=1 perl Makefile.PL INSTALLDIRS=vendor DESTDIR="$pkgdir/"
   make
 }
 
