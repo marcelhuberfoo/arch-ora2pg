@@ -1,7 +1,7 @@
 # Maintainer: Marcel Huber <`echo "moc tknup liamg tä oofrebuhlecram" | rev`>
 _perlmod=ora2pg
 pkgname=perl-$_perlmod
-pkgver=13.0.3.g2310354
+pkgver=13.0.4.g905db2c
 pkgrel=1
 pkgdesc="Oracle to PostgreSQL database schema converter"
 arch=('any')
